@@ -11,7 +11,7 @@ function storeAnswer(question_number, event){
         console.log(event.target.value);
         answers['question'+question_number] = parseInt(event.target.value);
         console.log(answers);
-    }
+    } 
 }
 
 question_one.addEventListener('click', function(event){
@@ -31,13 +31,13 @@ question_five.addEventListener('click', function(event){
 })
 
 function totalScore(){
-    var total_score = 
+    var total_score =
     answers.question1+
     answers.question2+
     answers.question3+
-    answers.question4+ 
+    answers.question4+
     answers.question5;
-    
+
     return total_score;
 }
 
@@ -48,7 +48,7 @@ function getInfoBasedOnScore(){
         var score_info = "Parabéns! Você é pika e tem bom gosto, a Taylor é A MELHOR"
     }
 
-    // return score_info;
+    return score_info;
 }
 
 var submit1 = document.getElementById('submit1');
@@ -90,11 +90,11 @@ submit5.addEventListener('click', function(){
 })
 
 submit5.addEventListener('click', function(){
-    document.getElementById("printtotalscore").innerHTML = totalScore();
+    document.getElementById("printtotalscore").innerHTML =  totalScore();
     document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
 })
 
 function growProgressBar(percentage_width){
     var bar = document.getElementById("progress_bar");
     bar.style.width = percentage_width;
-}   
+}
